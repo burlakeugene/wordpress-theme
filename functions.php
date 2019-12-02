@@ -84,6 +84,7 @@ add_action('admin_init', function () {
   register_setting('theme-page-settings', 'head_additions');
   register_setting('theme-page-settings', 'copyrights');
   register_setting('theme-page-settings', 'address');
+  register_setting('theme-page-settings', 'phone');
   register_setting('theme-page-settings', 'theme-color');
 });
 
