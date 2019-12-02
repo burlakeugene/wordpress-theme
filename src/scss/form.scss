@@ -1,0 +1,145 @@
+.form {
+  margin: 0 -15px;
+  &-title {
+    color: $text-color;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 0 15px;
+  }
+  .phone {
+    position: static;
+  }
+  label {
+    display: block;
+    padding: 5px 0;
+  }
+  input,
+  textarea,
+  select {
+    padding: 10px 15px;
+    line-height: 1em;
+    background-color: $color-white;
+    border: 2px solid $theme-color;
+    color: $text-color;
+    font-weight: 300;
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+    font-size: 16px;
+    &::-webkit-input-placeholder {
+      color: $color-gray;
+    }
+    &::-moz-placeholder {
+      color: $color-gray;
+    }
+    &:-ms-input-placeholder {
+      color: $color-gray;
+    }
+    &:-moz-placeholder {
+      color: $color-gray;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  select {
+    height: 42px;
+    -webkit-appearance: none;
+    background-image: url(../images/arrow.svg);
+    background-position: center right;
+    background-position-x: calc(100% - 10px);
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    appearance: none;
+    padding-right: 40px;
+  }
+  textarea {
+    resize: none;
+    max-height: 100px;
+  }
+  &-bottom {
+    font-size: 0;
+    &-left,
+    &-right {
+      display: inline-block;
+      width: 50%;
+      vertical-align: top;
+    }
+    &-right {
+      text-align: right;
+    }
+  }
+  .form-submit {
+    display: inline-block;
+    position: relative;
+    padding: 0 15px;
+    .ajax-loader {
+      position: absolute;
+      background-image: none;
+      top: 50%;
+      right: 23px;
+      margin: 0;
+      width: 16px;
+      height: 16px;
+      margin-top: -8px;
+      border: 2px solid $color-white;
+      border-right-color: transparent;
+      opacity: 0;
+      visibility: hidden;
+      border-radius: 50%;
+      -webkit-animation: rotate 1s linear infinite;
+      animation: rotate 1s linear infinite;
+      &.is-active {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  font-size: 0;
+  label,
+  .wpcf7-response-output {
+    font-size: 14px;
+  }
+  .wpcf7-response-output {
+    padding: 15px;
+  }
+  label {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    padding: 10px 15px;
+    &.half {
+      width: 50%;
+    }
+  }
+
+  &-file {
+    position: relative;
+    input {
+      opacity: 0;
+    }
+    &-fake {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #aaa;
+      padding-left: 30px;
+      cursor: pointer;
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        transform: translateY(-50%);
+        background-size: 20px 20px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-image: url(../images/clip.svg);
+      }
+    }
+  }
+}

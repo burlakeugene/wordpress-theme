@@ -1,0 +1,11 @@
+.lazy{
+  overflow: hidden;
+  img{
+    @include animated();
+  }
+  &:not(.lazy-loaded){
+    img{
+      filter: blur(20px);
+    }
+  }
+}
